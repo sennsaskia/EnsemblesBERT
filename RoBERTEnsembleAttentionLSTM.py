@@ -6,12 +6,9 @@ import torch
 from torch.autograd import Variable
 from torch.nn import functional as F
 
-from models.BERTBase_RoBERTa_Ensemble import RoBERTaEns
-from models.BERTBase_Ensemble import BERTBaseEnsemble
-
-from AudiBERTutils import pad_sequences
-
-# Here the RoBERTa class is created, no audio handling!
+# Here the RoBERTEnsemble class is created using the simple averaging ensemble strategy;
+# fine-tuned with an additional LSTM and attention layer;
+# no audio handling!
 class RoBERTEnsemble(nn.Module):
     
     def __init__(self):
