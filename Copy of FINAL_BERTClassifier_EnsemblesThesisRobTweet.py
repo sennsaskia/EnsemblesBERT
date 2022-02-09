@@ -1,7 +1,7 @@
 # Author Saskia Jan 2022 for BERT, RoBERTa, DistilBERT and BERTweet, 
-# Ensembles with averaging 2 classifier or using 1 classifier,
-# with or without attention layers (and LSTM) on top!
-# 2020 Audio Enhanced BERT - AudiBERT
+# Ensembles with simple averaging or using one final classifier ensemble strategy method,
+# Fine-tuned with or without attention layers with or without LSTM!
+# Code adapted from Ermal Toto; 2020 Audio Enhanced BERT - AudiBERT
 
 from AudiBERTutils import recordRun, pad_sequences, getIdentifier, str2bool, runCount 
 import traceback
@@ -18,7 +18,7 @@ MAX_LEN = 128
 batch_size = 8#4
 epochs = 10#20
 learning_rate = 2e-5
-question ="doing_today" #"advice_yourself"
+question ="doing_today" #"advice_yourself" #DAIC-WOZ datasets
 logtodb = True #False
 maxruns = 100 #20 
 modelName = 'RobTweetEnsemble'
@@ -80,7 +80,7 @@ if args.__dict__["maxlen"]  is not None:
     MAX_LEN = args.__dict__["maxlen"]
 
     
-db='./expResults/RobTweet1.db'
+db='./expResults/RobTweet1.db' #database name; create prior to runing the file!
 
 typeOfTask = modelName
 
