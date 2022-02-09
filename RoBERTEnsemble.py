@@ -6,7 +6,7 @@ import torch
 from torch.autograd import Variable
 from torch.nn import functional as F
 
-# Here the RoBERTa class is created, no audio handling!
+# Here the RoBERTEnsemble class is created using the simple averaging ensemble startegy, no audio handling!
 
 class RoBERTEnsemble(nn.Module):
     
