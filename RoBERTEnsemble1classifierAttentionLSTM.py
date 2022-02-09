@@ -6,10 +6,9 @@ import torch
 from torch.autograd import Variable
 from torch.nn import functional as F
 
-
-from AudiBERTutils import pad_sequences
-
-# Here the RoBERTa class is created, no audio handling!
+# Here the RoBERTEnsemble class is created using one final classifier ensemble strategy;
+# fine-tuned with an additional LSTM and attention layer;
+# no audio handling!
  
 class RoBERTEnsemble(nn.Module):
     
